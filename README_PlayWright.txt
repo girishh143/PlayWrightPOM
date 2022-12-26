@@ -23,4 +23,4 @@ To ope a allure report from command line reqiore following command, install it i
     npm i -g allure-commandline
 
 * You can debug the playwright script but omly javascript file
-PWDEBUG=1 node filename;
+    PWDEBUG=1 node filename;
