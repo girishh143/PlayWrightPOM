@@ -22,3 +22,5 @@ To ope a allure report from command line reqiore following command, install it i
 
 * You can debug the playwright script but omly javascript file
     PWDEBUG=1 node filename;
+
+* Added this for testing the braches
