@@ -1,11 +1,12 @@
-import { expect, test } from "@playwright/test"
-import BookPages from "../app.bookcart.pages/bookPage"
-import HeaderPage from "../app.bookcart.pages/headerPage"
-import LoginPage from "../app.bookcart.pages/loginPage"
+// import { expect, test } from "@playwright/test"
+// import BookPages from "../app.bookcart.pages/bookPage"
+// import HeaderPage from "../app.bookcart.pages/headerPage"
+// import LoginPage from "../app.bookcart.pages/loginPage"
 import * as data from "../utils/testdata/loginUser.json"
+import test, { expect } from "../app.book.base/myFixtures"
 
 test.describe("Add product to cart", () => {
-    test("Add a book - Unauthenticated user", async ({ page, browserName }) => {
+    test("Add a book - Unauthenticated user", async ({ books, header, page, browserName }) => {
 
         //It will slow the execution of this test tripple of given default time
         // you can't use it in beforeAll() and AfterAll() hooks
@@ -14,8 +15,8 @@ test.describe("Add product to cart", () => {
         //Below skip command will not execute the test if the browser is firefox
         test.skip(browserName === "firefox", "This test should not run on firefox");
 
-        const books = new BookPages(page)
-        const header = new HeaderPage(page)
+        // const books = new BookPages(page)
+        // const header = new HeaderPage(page)
 
         await test.step("Navigate to home", async () => {
             await page.goto("/")
@@ -29,10 +30,10 @@ test.describe("Add product to cart", () => {
 
     })
 
-    test("Add a book - authenticated user", async ({ page }) => {
-        const books = new BookPages(page)
-        const login = new LoginPage(page)
-        const header = new HeaderPage(page)
+    test("Add a book - authenticated user", async ({ login, books, header }) => {
+        // const books = new BookPages(page)
+        // const login = new LoginPage(page)
+        // const header = new HeaderPage(page)
 
         await test.step("Navigate to login page", async () => {
             await login.navigateToLoginPage();

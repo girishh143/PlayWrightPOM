@@ -1,12 +1,13 @@
-import test from "@playwright/test"
-import RegisterPage from "../app.bookcart.pages/registerPage"
-import Assert from "../app.book.base/asserts"
+// import test from "@playwright/test"
+// import RegisterPage from "../app.bookcart.pages/registerPage"
+// import Assert from "../app.book.base/asserts"
 import * as data from "../utils/testdata/registerUser.json"
+import test, { expect } from "../app.book.base/myFixtures"
 
-test("Register User", async ({ page }) => {
+test("Register User", async ({ register, assert }) => {
 
-    const register = new RegisterPage(page);
-    const assert = new Assert(page)
+    // const register = new RegisterPage(page);
+    // const assert = new Assert(page)
     //This will create Unique user name always
     const userName = data.userName + Date.now().toString();
     console.log("New User id = ", userName)
