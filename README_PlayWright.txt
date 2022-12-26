@@ -4,11 +4,9 @@
 3. Select the Broswer and hit 'Ok'
 
 
-
 * To Excute test in multiple environment We need to install two pakages
     1. npm install dotenv --save   -------> (https://github.com/motdotla/dotenv)
     2. npm install --save-dev cross-env ------>(https://github.com/kentcdodds/cross-env) 
-
 
 
 * To download the latest version you user command
