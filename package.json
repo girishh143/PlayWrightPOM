@@ -1,0 +1,22 @@
+{
+  "name": "book.cart.app.test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.29.1",
+    "allure-playwright": "^2.0.0-beta.21"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "fs": "^0.0.1-security",
+    "pdf-parse": "^1.1.1",
+    "playwright": "^1.29.1"
+  }
+}

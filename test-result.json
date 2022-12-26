@@ -1,0 +1,181 @@
+{
+  "config": {
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "E:/PlayWright/book.cart.app.test/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "E:/PlayWright/book.cart.app.test/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "env_loginUser.test.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "reporter": [
+      [
+        "dot",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "on-failure"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-result.json"
+        }
+      ],
+      [
+        "E:\\PlayWright\\book.cart.app.test\\node_modules\\allure-playwright\\dist\\index.js",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "configFile": "E:\\PlayWright\\book.cart.app.test\\playwright.config.ts",
+    "rootDir": "E:/PlayWright/book.cart.app.test/tests",
+    "quiet": false,
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.29.1",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "env_loginUser.test.ts",
+      "file": "env_loginUser.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login Scenario",
+          "file": "env_loginUser.test.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Invalid Login",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 9711,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Navigate to login page",
+                          "duration": 2322
+                        },
+                        {
+                          "title": "Enter valid username and invalid password",
+                          "duration": 968
+                        },
+                        {
+                          "title": "Enter invalid username and valid password",
+                          "duration": 972
+                        },
+                        {
+                          "title": "Enter invalid username and invalid password",
+                          "duration": 1406
+                        }
+                      ],
+                      "startTime": "2022-12-23T07:22:03.366Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3142930da667a1a977a4-2f335ec661b495f3c140",
+              "file": "env_loginUser.test.ts",
+              "line": 11,
+              "column": 9
+            },
+            {
+              "title": "Valid Login @TagloginTest",
+              "ok": true,
+              "tags": [
+                "TagloginTest"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 10938,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Navigate to login page",
+                          "duration": 2397
+                        },
+                        {
+                          "title": "Login with valid credentials",
+                          "duration": 2801
+                        },
+                        {
+                          "title": "Logout User",
+                          "duration": 2603
+                        }
+                      ],
+                      "startTime": "2022-12-23T07:22:04.185Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3142930da667a1a977a4-e23e9479da73bef40d18",
+              "file": "env_loginUser.test.ts",
+              "line": 37,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": []
+}
