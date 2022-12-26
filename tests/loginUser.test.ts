@@ -1,14 +1,15 @@
 
-import { expect, test } from "@playwright/test"
-import HeaderPage from "../app.bookcart.pages/headerPage";
-import LoginPage from "../app.bookcart.pages/loginPage";
+// import { expect, test } from "@playwright/test"
+// import HeaderPage from "../app.bookcart.pages/headerPage";
+// import LoginPage from "../app.bookcart.pages/loginPage";
 //var data = require('../utils/testdata/loginUser.json');
 import * as data from "../utils/testdata/loginUser.json"
+import test, { expect } from "../app.book.base/myFixtures"
 
 test.describe("Login Scenario", () => {
 
-    test("Invalid Login", async ({ page }) => {
-        const login = new LoginPage(page)
+    test("Invalid Login", async ({ login }) => {
+        //  const login = new LoginPage(page)
 
         await test.step("Navigate to login page", async () => {
             await login.navigateToLoginPage();
@@ -33,10 +34,10 @@ test.describe("Login Scenario", () => {
         })
     })
 
-    test.only("Valid Login", async ({ page }) => {
+    test.only("Valid Login", async ({ login, header }) => {
 
-        const login = new LoginPage(page)
-        const header = new HeaderPage(page)
+        // const login = new LoginPage(page)
+        // const header = new HeaderPage(page)
 
         await test.step("Navigate to login page", async () => {
             await login.navigateToLoginPage();

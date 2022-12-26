@@ -4,10 +4,10 @@ import { devices } from '@playwright/test';
 const config: PlaywrightTestConfig = {
   testDir: './tests',
   testMatch: [
-    //"tests/registerUser.test.ts",
-    //"tests/loginUser.test.ts",
-    // "addProductToCart.test.ts",
-    "env_loginUser.test.ts",
+    "tests/registerUser.test.ts",
+    // "tests/loginUser.test.ts",
+    //"addProductToCart.test.ts",
+    // "env_loginUser.test.ts",
     // "tests/pdfFileVerification.test.ts"
 
   ],
